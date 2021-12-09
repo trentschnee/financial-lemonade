@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Lemons</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="styles/style.css" type="text/css">
+  <link rel="stylesheet" href="styles/modal.css" type="text/css">
+
+
+</head>
+
+<body>
+
+
+  <div class="game-board before-game">
+    <div>
+      <button id="info-btn">ℹ</button>
+    </div>
+
+    <div class="life-area">
+
+
+
+      <div class="stats life-stats">
+        <div class="life-bar">
+          <div class="life-left life-color"></div>
+        </div>
+        <div class="life-total"></div>
+        <!-- Change the name and emoji here -->
+        <div class="thumbnail">🦾</div>
+        <div class="name">Life</div>
+      </div>
+
+      <div class="card life-card life-color">
+        <div class="text"></div>
+        <div class="power"></div>
+      </div>
+
+    </div>
+
+    <div class="player-area">
+
+      <div class="stats player-stats">
+        <div class="life-bar">
+          <div class="life-left player-color"></div>
+        </div>
+        <div class="life-total"></div>
+        <!-- Change the name and emoji here -->
+        <div class="thumbnail">😎</div>
+        <div class="name "><span id="player-name" class="tooltip " contenteditable="true">You <span class="tooltiptext"
+              contenteditable="false">Psst, click me and
+              start typing to change your name.</span></span> </div>
+      </div>
+
+      <div class="card player-card player-color">
+        <div class="text"></div>
+        <div class="power"></div>
+      </div>
+
+      <div class="card player-card player-color">
+        <div class="text"></div>
+        <div class="power"></div>
+      </div>
+
+      <div class="card player-card player-color">
+        <div class="text"></div>
+        <div class="power"></div>
+      </div>
+
+      <button onClick="gamePlay.start();" class="start-game">Play the Game!</button>
+      <button class="next-turn">Next!</button>
+    </div>
+  </div>
+
+
+  <!-- The Modal -->
+  <div id="info-modal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Financial Lemonade 🍋</h2>
+      </div>
+      <div class="modal-body">
+
+
+        <h4>A <small class="tooltip">little <span class="tooltiptext">I'm being sarcastic</span></small> Fact:</h3>
+          <p>Did you know that <a href="https://www.apa.org/news/press/releases/stress/2014/stress-report.pdf">money
+              is the top cause of stress</a> in the United States? </p>
+          <h2>Why</h2>
+          <p>Since you all are financial masterminds, this tidbit of information wasn't directed to you. </p>
+          <p>However this game was created to
+            maybe help people from around the world sharpen their financial blade.</p>
+          <h2>Instructions</h2>
+          <p>It's you VS life. Choose the best card to stop life's notorious financial attack. The first one who stays
+            above 0 points wins! </p>
+
+          <caption>
+            Disclaimer: This game is opinionated. I am not a financial advisor.
+          </caption>
+
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="winner-section">
+    <div>
+      <span class="winner-message"></span>
+      <button class="restart" onClick="location.reload()">Play Again</button>
+    </div>
+  </div>
+
+  <script src="scripts/game.js" type="text/javascript"></script>
+  <script src="scripts/modal.js" type="text/javascript"></script>
+</body>
+
+</html>
